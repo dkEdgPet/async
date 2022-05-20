@@ -9,7 +9,7 @@ info:
     url: https://www.apache.org/licenses/LICENSE-2.0
 servers:
   test:
-    url: '{protocol}://foo.dev.bar.ipa.baz.com:{port}'
+    url: 'pulsar+ssl://foo.dev.bar.ipa.baz.com:1234'
     description: Test
     variables:
       protocol:
