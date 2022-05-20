@@ -1,0 +1,28 @@
+asyncapi: 2.3.0
+info:
+  title: AsyncApi
+  version: 1.0.0
+  description: |
+    Mock of AsyncApi spec
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+  test:
+    url: '{protocol}://foo.dev.bar.ipa.baz.com:{port}'
+    description: Test
+    variables:
+      protocol:
+        default: 'pulsar+ssl'
+      port:
+        default: '1234'
+      basePath: 
+        default: test
+channels:
+  test:
+    x-eventarchetype: objectchanged
+    x-classification: green
+    publish:
+      bindings:
+        http:
+          type: response
